@@ -56,4 +56,4 @@ If your installation and setup was successful, you should see a page similar to 
 
 > That's it😇 You did good
 
-[NEXT ?](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-2k)
+[NEXT ?](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-2)
