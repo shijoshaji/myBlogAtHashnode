@@ -2,6 +2,19 @@
 
 Welcome to this series, hope you have installed angular & node -> [Prerequisites & Installation](https://shijoshaji.hashnode.dev/prerequisites)
 
+
+## What we gone build?
+`Before we start, i like to show how the end product will look like`
+
+[GitHub Source Code](https://github.com/shijoshaji/weatherApp)
+
+Fetched data based on geo location 
+> ![LowerTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1651907689829/bDtNeNwcl.PNG align="left")
+
+
+Fetched data based on City name specified 
+> ![MaxTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1651907706563/mkC284JCL.PNG align="left")
+
 ## Create a workspace and weatherApp application
 Open gitbash/terminal and lets create a workspace
 
