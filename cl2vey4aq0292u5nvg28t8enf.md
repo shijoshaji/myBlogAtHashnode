@@ -39,4 +39,4 @@ You will see similar output
 
 > That's it 😇 You did a good job
 
-[NEXT?](https://shijoshaji.hashnode.dev/create-app)
+[NEXT?](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-1)
