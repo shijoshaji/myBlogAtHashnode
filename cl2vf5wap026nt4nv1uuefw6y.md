@@ -1,4 +1,4 @@
-## Create Angular weatherApp
+## Create Angular weatherApp - Part 1
 
 Welcome to this series, hope you have installed angular & node -> [Prerequisites & Installation](https://shijoshaji.hashnode.dev/prerequisites)
 
@@ -40,3 +40,5 @@ The --open (or just -o) option automatically opens your browser to [http://local
 If your installation and setup was successful, you should see a page similar to the following.
 
 ![app-works.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651906256289/X3qUnnYWG.png align="left")
+
+> That's it😇 You did good
