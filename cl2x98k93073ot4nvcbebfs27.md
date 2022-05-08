@@ -1,6 +1,6 @@
 ## Create Angular weatherApp - Part 4
 
-Welcome to this series, hope you have completed [Part 3](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-3)
+Welcome to final part of this series, hope you have completed [Part 3](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-3)
 We have 2 pending things now, this will be the last part as development
 
 ## Call the services created
@@ -149,3 +149,6 @@ I am trying to search with Rajasthan, as you can see we get data.
 
 
 > You can try any cities, not necessarily Indian cities. This API supports international Cities too
+
+> That's it😇 You did great, Hope you have learned something :)
+Feel free to connect with me [Porfolio](https://shijoshaji.herokuapp.com/)
