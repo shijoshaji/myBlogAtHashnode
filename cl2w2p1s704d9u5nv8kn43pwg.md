@@ -179,4 +179,12 @@ This above code has 2 method where `fetchWeatherData` returns the data based on 
 
 These logic are getting called from file `src\app\app.component.ts` we are to create the logic.
 
+> That's it😇 You did good
+
+*Recap: *
+- Created API accounts
+- Updated the required info in environment file
+- Created Services
+
+
 
