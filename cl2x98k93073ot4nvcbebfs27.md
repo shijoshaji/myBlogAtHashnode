@@ -132,3 +132,20 @@ File `src\app\app.component.html` is updated with below code
 </div>
 ``` 
 
+**Well done**,  now lets run the application and see if its working
+```
+ng serve  --open
+```
+this will open the browser automatically [http://localhost:4200/](http://localhost:4200/)
+If all goes well you will see the below screenshot
+
+I live in Bangalore, so based on my location I get this data
+
+![LowerTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1652013037361/kVyFMUDwy.PNG align="left")
+
+I am trying to search with Rajasthan, as you can see we get data.
+
+![MaxTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1652013049092/aYJ3j-uc5.PNG align="left")
+
+
+> You can try any cities, not necessarily Indian cities. This API supports international Cities too
