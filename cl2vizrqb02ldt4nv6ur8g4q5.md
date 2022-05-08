@@ -321,6 +321,8 @@ ng serve --open
 
 > That's it😇 You did good
 
+[NEXT ?](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-3)
+
 
 
 
