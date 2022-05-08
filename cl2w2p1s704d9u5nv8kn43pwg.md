@@ -94,5 +94,89 @@ export interface Sys {
 
 ``` 
 
- 
+Great you have created interface of the Rapid API into our App.
+Now lets work on the environment file as said earlier
+
+## Environment file
+Angular creates 2 environment files when we created our app using `ng new` 
+Its in location `src\environments` we have two files one for test `src\environments\environment.ts` and other for prod `src\environments\environment.prod.ts`
+
+Lets add below code to these files:
+
+`src\environments\environment.ts`
+
+```
+export const environment = {
+  production: false,
+  baseURL: 'https://community-open-weather-map.p.rapidapi.com/weather',
+  reverseGeoCodeURL:
+    'https://api.bigdatacloud.net/data/reverse-geocode-client?',
+  XRapidAPIHostName: 'X-RapidAPI-Host',
+  XRapidAPIHostValue: 'community-open-weather-map.p.rapidapi.com',
+  XRapidAPIKeyName: 'X-RapidAPI-Key',
+  XRapidAPIKeyValue: 'YOUR API KEY VALUE HERE',
+};
+```
+`src\environments\environment.prod.ts`
+
+```
+export const environment = {
+  production: true,
+  baseURL: 'https://community-open-weather-map.p.rapidapi.com/weather',
+  reverseGeoCodeURL:
+    'https://api.bigdatacloud.net/data/reverse-geocode-client?',
+  XRapidAPIHostName: 'X-RapidAPI-Host',
+  XRapidAPIHostValue: 'community-open-weather-map.p.rapidapi.com',
+  XRapidAPIKeyName: 'X-RapidAPI-Key',
+  XRapidAPIKeyValue: 'YOUR API KEY VALUE HERE',
+};
+```
+Great, if you have noticed in code `reverseGeoCodeURL` this is from bigdatacloud api I have added, will explain on this when i create services to call these API's
+
+## Create Service
+This holds the logic on calling API we want to use, this has logic to call both the API
+
+Use this cmd to create service
+```
+ng generate service services/weather-api
+```
+ Once created in file `src\app\services\weather-api.service.ts` lets add the below code
+
+```
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { WeatherInterface } from '../models/weatherAPI.models';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class WeatherAPIService {
+  constructor(private http: HttpClient) {}
+
+  fetchWeatherData(placeName: string): Observable<WeatherInterface> {
+    return this.http.get<WeatherInterface>(environment.baseURL, {
+      headers: new HttpHeaders()
+        .set(environment.XRapidAPIHostName, environment.XRapidAPIHostValue)
+        .set(environment.XRapidAPIKeyName, environment.XRapidAPIKeyValue),
+      params: new HttpParams()
+        .set('q', placeName)
+        .set('units', 'imperial')
+        .set('mode', 'json'),
+    });
+  }
+
+  getlocation(lat: any, long: any) {
+    var geoAPI = `${environment.reverseGeoCodeURL}latitude=${lat}&longitude=${long}&localityLanguage=en`;
+
+    return this.http.get<any>(geoAPI);
+  }
+}
+```
+This above code has 2 method where `fetchWeatherData` returns the data based on city name we pass from front end ie it calls the RAPID API
+`getlocation` returns the city name based on the geo location we pass 
+
+These logic are getting called from file `src\app\app.component.ts` we are to create the logic.
+
 
