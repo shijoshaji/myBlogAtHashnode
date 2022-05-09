@@ -2,34 +2,35 @@
 
 Welcome to this series, hope you have completed [Part 2](https://shijoshaji.hashnode.dev/create-angular-weatherapp-part-2)
 
-## Dynamic Data
-In part 2 we created a html app with static values and data (I usually create this way to see first how I must expect data and design as such ). In this part 3 lets make it as more of Angular 😜 than plain html css, js.
+## We need Dynamic Data
+In part 2 we created a html app with static values/data (I usually create this way to see first how I must expect data and design as such ). 
+In this part 3 lets make it as more of Angular 😜 than plain html css, js.
 
 Before working on Html part, what we need is dynamic data(based on geo location & search with city name) for that we need a API.
 
 API that I have used are:
 - [Rapid API weather](https://rapidapi.com/community/api/open-weather-map) -> get weather data
 - [BigDataCloud](https://www.bigdatacloud.com/blog/convert-getcurrentposition-free-reversegeocoding-api) -> get city name with geo location
-> **Note:** There are many API's out there you can make use of it, I just wanted to try with multiple API provider
+> **Note:** There are many API's out there you can make use of it, I just wanted to try with multiple API provider.
 
 ## Rapid API Account
 You got to sign up to Rapid API first to make use of the API's.
 
-Lets go to [Rapid API weather](https://rapidapi.com/community/api/open-weather-map) the one I used and signup/login if already registered
+Lets go to [Rapid API weather](https://rapidapi.com/community/api/open-weather-map) the one I used. Signup/login if already registered
 Once login, go to the API and select the `Current Weather Data` end point and subscribe it to get API KEY.
-Make sure to get all the info in header parameters as below screenshot as this will be used in our Environment file of our App (*my API KEY is blued out, Please use yours *)
+Make sure to get all the info in header parameters as below screenshot as this will be used in our *Environment file* of our App (*my API KEY is blued out, Please use your API key *)
 
 ![Capture.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1652009574214/pQlaif3u7.PNG align="left")
 
 > Hope you have signed up, you can test the endpoint by mentioning the city name in 'q' in Required Parameter and click on Test Endpoint button, you will get the response with status code 200 if its success.
 ![Capture.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1652010072102/Q1wyjTvN8.PNG align="left")
 
-Copy that sample response you got (you can choose my sample response from [here](https://github.com/shijoshaji/weatherApp/blob/main/src/app/services/sampleResponse.json)), we need that to create our Interface
+Copy that sample response you got (you can choose my sample response from [here](https://github.com/shijoshaji/weatherApp/blob/main/src/app/services/sampleResponse.json)), we need that to create our Interface.
 
 ## Create Interface from response
-Created by exporting the json response from API and generated this interface using the [URL]( https://transform.tools/json-to-typescript) just paste you json (left side)and interface is generated (right side)
+Created by exporting the JSON response from API and generated this interface using the [URL]( https://transform.tools/json-to-typescript) just paste you JSON (left side) and Interface is generated (right side).
 
-Copy that interface generate, lets create a folder 'models' in `src\app\` create a new file 'weatherAPI.models.ts' in models folder ie`src\app\models\weatherAPI.models.ts` paste the generated code in that file like this
+Copy the Interface generate, lets create a folder 'models' in `src\app\` create a new file 'weatherAPI.models.ts' in models folder ie`src\app\models\weatherAPI.models.ts` paste the generated code in that file like this.
 
 ```
 /** NOTE:
@@ -94,12 +95,12 @@ export interface Sys {
 
 ``` 
 
-Great you have created interface of the Rapid API into our App.
-Now lets work on the environment file as said earlier
+Great you have created Interface of the Rapid API into our App.
+Now lets work on the environment file as said earlier.
 
 ## Environment file
 Angular creates 2 environment files when we created our app using `ng new` 
-Its in location `src\environments` we have two files one for test `src\environments\environment.ts` and other for prod `src\environments\environment.prod.ts`
+Its in location `src\environments` we have two files one for test `src\environments\environment.ts` and other for prod `src\environments\environment.prod.ts`.
 
 Lets add below code to these files:
 
@@ -131,16 +132,16 @@ export const environment = {
   XRapidAPIKeyValue: 'YOUR API KEY VALUE HERE',
 };
 ```
-Great, if you have noticed in code `reverseGeoCodeURL` this is from bigdatacloud api I have added, will explain on this when i create services to call these API's
+Great, if you have noticed in code `reverseGeoCodeURL` this is from bigdatacloud api I have added, will explain on this when i create services to call these API's.
 
 ## Create Service
-This holds the logic on calling API we want to use, this has logic to call both the API
+This holds the logic on calling API we want to use, this has logic to call both the API.
 
-Use this cmd to create service
+Use this cmd to create service.
 ```
 ng generate service services/weather-api
 ```
- Once created in file `src\app\services\weather-api.service.ts` lets add the below code
+ Once created in file `src\app\services\weather-api.service.ts` lets add the below code.
 
 ```
 import { Injectable } from '@angular/core';
@@ -174,14 +175,14 @@ export class WeatherAPIService {
   }
 }
 ```
-This above code has 2 method where `fetchWeatherData` returns the data based on city name we pass from front end ie it calls the RAPID API
+This above code has 2 method where `fetchWeatherData` returns the data based on city name we pass from front end.
 `getlocation` returns the city name based on the geo location we pass 
 
-These logic are getting called from file `src\app\app.component.ts` we are to create the logic.
+These logic are getting called from file `src\app\app.component.ts` we need to add that logic.
 
 > That's it😇 You did good
 
-*Recap: *
+*Lets Quick Recap: *
 - Created API accounts
 - Updated the required info in environment file
 - Created Services
