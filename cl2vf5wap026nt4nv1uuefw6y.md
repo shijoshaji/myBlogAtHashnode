@@ -3,20 +3,20 @@
 Welcome to this series, hope you have installed angular & node -> [Prerequisites & Installation](https://shijoshaji.hashnode.dev/prerequisites)
 
 
-## What we gone build?
-`Before we start, i like to show how the end product will look like`
+## What are we building?
+`Before we start, I like to show how the end product will look like.`
 
 [GitHub Source Code](https://github.com/shijoshaji/weatherApp)
 
-Fetched data based on geo location 
+Fetched data based on geo location: 
 > ![LowerTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1651907689829/bDtNeNwcl.PNG align="left")
 
 
-Fetched data based on City name specified 
+Fetched data based on City name specified: 
 > ![MaxTemp.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1651907706563/mkC284JCL.PNG align="left")
 
 ## Create a workspace and weatherApp application
-Open gitbash/terminal and lets create a workspace
+Open gitbash/terminal and lets create a workspace.
 
 
 - Run the CLI command ng new and provide the name my-app, as shown here:
@@ -25,13 +25,14 @@ ng new my-app
 ```
 
 
-- Here **ng new** cmd to create app **my-app** is the name of the app
- I have created 
+- Here **ng new** command is to create app, **my-app** is the name of the app you can give.
+
+ I have created `weatherApp`
 ```
 ng new weatherApp
 ``` 
 
-2. The ng new command prompts you for information about features to include in the initial app. Accept the defaults by pressing the Enter or Return key.
+2. The **ng new** command prompts you for information about features to include in the initial app. Accept the defaults by pressing the Enter or Return key.
 
 3. The Angular CLI installs the necessary Angular npm packages and other dependencies. This can take a few minutes.
 
