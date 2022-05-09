@@ -7,23 +7,23 @@ First thing first, lets open our **weatherApp ** is VS code / or any IDE.
 Lets remove unwanted code which was generated from previous step
 
 
-1. Go to this file and remove the entire content: `src\app\app.component.html`
+1. Go to the file `src\app\app.component.html` and remove the entire content 
 
-1. Lets create a simple div in the file
+1. Lets create a simple div in the file.
 ```
 <div>Weather App code</div>
 ```
 
-1. Open VS code terminal and type this below command, you must be able to see you app still runs fine
+1. Open VS code terminal and type this below command, you must be able to see you app still runs fine.
 ```
 ng serve --open
 ``` 
 
-## Design CSS part of APP
+## Lets design CSS part of App
 Our app design will have 2 parts 
 
-- Upper Data - Holds the city name and main temperature
-- Lower Data - Holds additional data like humidity, wind etc
+- *Upper Data* - Holds the city name and main temperature
+- *Lower Data* - Holds additional data like humidity, wind etc
 
 So lets design the CSS part first, go to file `src\styles.css` and add below code
 
@@ -185,13 +185,13 @@ body {
 }
 
 ``` 
-## Add images to APP
-Lets add images needed for the app in this folder `src\assets` you can get the images from [Github](https://github.com/shijoshaji/weatherApp/tree/main/src/assets)
+## Lets add images to the App
+Add images needed for the app in this folder `src\assets` you can get the images from [Github](https://github.com/shijoshaji/weatherApp/tree/main/src/assets) .
 
-## HTML part of APP
+## HTML part of the App
 
 Will add our HTML part of the app in this file: `src\app\app.component.html`
-Lets remove the content added earlier, and replace with this code for Upper Data
+Lets remove the content added earlier, and replace with this code for Upper Data.
 
 ```
 <div class="container">
@@ -207,7 +207,7 @@ Lets remove the content added earlier, and replace with this code for Upper Data
 
 </div>
 ``` 
-Lets do the Lower Data part
+Lets do the Lower Data part.
 
 ```
 <div class="lower-data">
@@ -255,7 +255,7 @@ Lets do the Lower Data part
   </div>
 ``` 
 
-Now the final HTML file will look like this
+Now the final HTML file will look like this.
 
 ```
 <div class="container">
@@ -314,7 +314,7 @@ Now the final HTML file will look like this
 </div>
 ``` 
 
-Save the file and run the app using, to see how it looks
+Save the file and run the app using, to see how it looks.
 ```
 ng serve --open
 ```  
