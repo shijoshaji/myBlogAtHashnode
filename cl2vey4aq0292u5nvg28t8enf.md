@@ -8,12 +8,12 @@ Before you study AngularJS, you should have a basic understanding of:
 - *[JavaScript](https://www.w3schools.com/js/default.asp)*
 - *[TypeScript](https://www.typescriptlang.org/)*
 
-Assuming you have a basic [Angular](https://angular.io/start) knowledge lets go ahead, else please have a quick look at a crash course and come back here
+Assuming you have a basic [Angular](https://angular.io/start) knowledge lets go ahead, else please have a quick look at a crash course and get back here.
 
 ## Installation
-Assuming you already have a good IDE (am using VS Code here)
-You will need Node.js & NPM, download [node](https://nodejs.org/en/download/) based on your OS.
-Once installed you can confirm by opening a terminal and typing below cmd
+Assuming you already have a good IDE (am using VS Code here)!
+You will need Node.js & NPM, you can download from [node](https://nodejs.org/en/download/) based on your OS.
+Once installed you can confirm by opening a terminal and typing below command.
 ```
 node -v
 ```
@@ -25,7 +25,7 @@ You will get a similar output with the version you have
 
 **Great! you did it. **
 
-Now lets install Angular CLI & lets confirm by below cmd's
+Now lets install Angular CLI & lets confirm by below command's
 ```
 npm install -g @angular/cli
 ```
