@@ -143,3 +143,32 @@ console.log('Young ppl', youngForce);
 ]
 
 ```
+
+# find in JS
+
+Similar to filter, but `find` returns one instance, first match value even if multiple values exist. Good for unique values. returns `undefined` if no match found
+
+```
+const people = [
+  { uName: 'John', role: 'SDE', age: 25, id: 1 },
+  { uName: 'Mathew', role: 'SDE2', age: 25, id: 2 },
+  { uName: 'Luke', role: 'SDE4', age: 30, id: 3 },
+  { uName: 'Mark', role: 'TL', age: 35, id: 4 },
+  { uName: 'Abraham', role: 'Principal Staff', age: 36, id: 5 },
+  { uName: 'Issac', role: 'MD', age: 40, id: 5 },
+];
+
+const unique = people.find(function (item) {
+  return item.id === 5;
+});
+
+console.log('unique', unique);
+
+//output: return first match ie Abraham
+{
+    "uName": "Abraham",
+    "role": "Principal Staff",
+    "age": 36,
+    "id": 5
+}
+```
