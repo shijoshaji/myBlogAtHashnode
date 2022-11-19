@@ -108,6 +108,15 @@ similar to `map` where we can get new array, but for certain condition alone.
 Then we can use `filter`
 
 ```
+const people = [
+  { uName: 'John', role: 'SDE', age: 25 },
+  { uName: 'Mathew', role: 'SDE2', age: 25 },
+  { uName: 'Luke', role: 'SDE4', age: 30 },
+  { uName: 'Mark', role: 'TL', age: 35 },
+  { uName: 'Abraham', role: 'Principal Staff', age: 36 },
+  { uName: 'Issac', role: 'MD', age: 40 },
+];
+
 const youngForce = people.filter(function (item) {
   return item.age <= 30;
 });
