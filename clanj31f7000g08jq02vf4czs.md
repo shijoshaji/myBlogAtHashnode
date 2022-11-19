@@ -102,3 +102,35 @@ console.log('New Array:', roles);
 
 // output: ["SDE", "SDE2", "SDE4", "TL", "Principal Staff", "MD"]
 ```
+
+# filter in JS
+similar to `map` where we can get new array, but for certain condition alone.
+Then we can use `filter`
+
+```
+const youngForce = people.filter(function (item) {
+  return item.age <= 30;
+});
+
+console.log('Young ppl', youngForce);
+
+//output:
+[
+    {
+        "uName": "John",
+        "role": "SDE",
+        "age": 25
+    },
+    {
+        "uName": "Mathew",
+        "role": "SDE2",
+        "age": 25
+    },
+    {
+        "uName": "Luke",
+        "role": "SDE4",
+        "age": 30
+    }
+]
+
+```
