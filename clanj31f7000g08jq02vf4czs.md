@@ -1,13 +1,21 @@
-# simplification Syntax
+---
+title: "simplification Syntax"
+datePublished: Sat Nov 19 2022 06:07:25 GMT+0000 (Coordinated Universal Time)
+cuid: clanj31f7000g08jq02vf4czs
+slug: simplification-syntax
+tags: javascript, map, filter, for-loop, array-javascript-array-methods-map-filter-foreach
+
+---
 
 # For loop in JS
 
-```
+```plaintext
 // output: John, Mathew, Luke, Mark, Abraham, Issac
 ```
 
 **Usual way:**
-```
+
+```plaintext
 const names = ['John', 'Mathew', 'Luke', 'Mark', 'Abraham', 'Issac'];
 
 for (let index = 0; index < names.length; index++) {
@@ -17,7 +25,8 @@ for (let index = 0; index < names.length; index++) {
 ```
 
 **Simplified:**
-```
+
+```plaintext
 const names = ['John', 'Mathew', 'Luke', 'Mark', 'Abraham', 'Issac'];
 
 // get values in index
@@ -35,12 +44,11 @@ for (let ele in names) {
 
 > Note: forEach dont return anything, it will be `undefined`
 
-We can use `forEach` concept too for above example:
-I have divided into 2 ways
+We can use `forEach` concept too for above example: I have divided into 2 ways
 
 **defined function**
 
-```
+```plaintext
 const names = ['John', 'Mathew', 'Luke', 'Mark', 'Abraham', 'Issac'];
 
 function eachName(item) {
@@ -52,7 +60,7 @@ names.forEach(eachName);
 
 **anonymous function**
 
-```
+```plaintext
 const names = ['John', 'Mathew', 'Luke', 'Mark', 'Abraham', 'Issac'];
 
 names.forEach(function (i) {
@@ -62,7 +70,7 @@ names.forEach(function (i) {
 
 Lets see same with different input where its an array of objects, I will use here the anonymous function (*can be achieved with defined function too*)
 
-```
+```plaintext
 const people = [
   { uName: 'John', role: 'SDE' },
   { uName: 'Mathew', role: 'SDE2' },
@@ -83,8 +91,7 @@ From above example of people, we want to get an array of roles available.
 
 How to achieve this, we can use `map` here, it return `new array`
 
-
-```
+```plaintext
 const people = [
   { uName: 'John', role: 'SDE' },
   { uName: 'Mathew', role: 'SDE2' },
@@ -104,10 +111,10 @@ console.log('New Array:', roles);
 ```
 
 # filter in JS
-similar to `map` where we can get new array, but for certain condition alone.
-Then we can use `filter`
 
-```
+similar to `map` where we can get new array, but for certain condition alone. Then we can use `filter`
+
+```plaintext
 const people = [
   { uName: 'John', role: 'SDE', age: 25 },
   { uName: 'Mathew', role: 'SDE2', age: 25 },
@@ -141,14 +148,13 @@ console.log('Young ppl', youngForce);
         "age": 30
     }
 ]
-
 ```
 
 # find in JS
 
 Similar to filter, but `find` returns one instance, first match value even if multiple values exist. Good for unique values. returns `undefined` if no match found
 
-```
+```plaintext
 const people = [
   { uName: 'John', role: 'SDE', age: 25, id: 1 },
   { uName: 'Mathew', role: 'SDE2', age: 25, id: 2 },
@@ -171,4 +177,14 @@ console.log('unique', unique);
     "age": 36,
     "id": 5
 }
+```
+
+### Find Duplicate/Unique in Array
+
+```javascript
+const arry = ['John', 'Mathew', 'John', 'Issac', 'Abraham', 'Issac'];
+
+const toFindDuplicates = arry => arry.filter((item, index) => arry .indexOf(item) !== index)
+
+const toFindUnique = arry => arry.filter((item, index) => arry .indexOf(item) === index)
 ```
