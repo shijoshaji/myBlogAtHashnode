@@ -182,9 +182,11 @@ console.log('unique', unique);
 ### Find Duplicate/Unique in Array
 
 ```javascript
-const arry = ['John', 'Mathew', 'John', 'Issac', 'Abraham', 'Issac'];
+const names= ['John', 'Mathew', 'John', 'Issac', 'Abraham', 'Issac'];
 
 const toFindDuplicates = arry => arry.filter((item, index) => arry .indexOf(item) !== index)
+console.log(toFindDuplicates (names))
 
 const toFindUnique = arry => arry.filter((item, index) => arry .indexOf(item) === index)
+console.log(toFindUnique(names))
 ```
